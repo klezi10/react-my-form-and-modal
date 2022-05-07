@@ -1,10 +1,12 @@
 import classes from "./ErrorModal.module.css"
 import Button from "./Button"
 import Card from "./Card"
+import { Fragment } from "react"
 
 export default function ErrorModal(props) {
     return (
-        <div className={classes.backdrop}>
+        <Fragment>
+            <div className={classes.backdrop} onClick={props.onDismiss} />
             <Card className={classes.modal}>
                 <header className={classes.header}>
                     <h2>{props.title}</h2>
@@ -16,6 +18,6 @@ export default function ErrorModal(props) {
                     <Button onClick={props.onDismiss}>Okay</Button>
                 </footer>
             </Card>
-        </div>
+        </Fragment>
     )
 }
