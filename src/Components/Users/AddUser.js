@@ -6,6 +6,7 @@ import Button from "../UI/Button"
 import ErrorModal from '../UI/ErrorModal'
 
 export default function AddUser(props) {
+    //just to read a value (instead of changing it) - no need for state, just use Ref
     const enteredUserNameInput = useRef()
     const enteredUserAgeInput = useRef()
     // const [enteredName, setEnteredName] = useState('')
